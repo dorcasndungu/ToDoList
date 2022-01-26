@@ -1,0 +1,13 @@
+<p class="text-dark rounded border text-center  border-2 display-3">To be done</p>
+
+<ul>
+  <div >
+    <li *ngFor="let do of dos;let i = index" class="rounded border p-3 my-3" >
+       {{do.name}} <br>
+    
+      <button class="btn btn-danger btn-large" (click)='showingDetails(i)'>See Details</button>
+      <app-details *ngIf='do.showDescription' [do]='do'></app-details>
+    </li>
+  </div>
+</ul>
+<p class="rounded-pill border text-info text-center" *ngIf='dos.length > 5'>You have too many goals</p>
