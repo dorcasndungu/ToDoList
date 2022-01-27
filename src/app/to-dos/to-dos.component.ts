@@ -23,8 +23,13 @@ export class ToDosComponent implements OnInit {
 
   completeGoal(isComplete: boolean, i: any){
     if (isComplete) {
-      this.dos.splice(i,1);
+      let toDelete = confirm(`Are you sure you want to delete ${this.dos[i].name}?`)
+    
+    if (toDelete){
+      this.dos.splice(i,1)
     }
+  }
+    
   }
 
   constructor() { }

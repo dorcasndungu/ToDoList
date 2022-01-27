@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ToDosComponent } from './to-dos/to-dos.component';
 import { DetailsComponent } from './details/details.component';
 import { DateCountPipe } from './date-count.pipe';
+import { StrikethroughDirective } from './strikethrough.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDosComponent,
     DetailsComponent,
-    DateCountPipe
+    DateCountPipe,
+    StrikethroughDirective
   ],
   imports: [
     BrowserModule,

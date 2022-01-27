@@ -1,3 +1,3 @@
 <p>{{do?.description}}</p>
-<p class="text-danger"><small>This goal will be complete in {{do?.completeDate|dateCount}} days</small></p>
-<button class="btn btn-dark" (click)= 'amDone(true)'><span><i class="bi bi-check-circle-fill"></i></span> Completed</button>
+<p class="text-danger"><small><i class="bi bi-calendar-check-fill"></i> This goal will be complete in {{do?.completeDate|dateCount}} days</small></p>
+<button class="btn btn-dark" (click)= 'deleteToDo(true)'><span><i class="bi bi-trash"></i></span> Delete</button>

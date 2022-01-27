@@ -10,7 +10,7 @@ export class DetailsComponent implements OnInit {
   @Input() do: ToDos | undefined;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  amDone(complete:boolean){
+  deleteToDo(complete:boolean){
     this.isComplete.emit(complete);
   }
   constructor() { }
