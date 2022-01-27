@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToDosComponent } from './to-dos/to-dos.component';
 import { DetailsComponent } from './details/details.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDosComponent,
-    DetailsComponent
+    DetailsComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

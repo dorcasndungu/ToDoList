@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit , Output, EventEmitter} from '@angular/core';
 import { ToDos } from '../to-dos';
 
 @Component({
@@ -8,7 +8,11 @@ import { ToDos } from '../to-dos';
 })
 export class DetailsComponent implements OnInit {
   @Input() do: ToDos | undefined;
- 
+  @Output() isComplete = new EventEmitter<boolean>();
+
+  amDone(complete:boolean){
+    this.isComplete.emit(complete);
+  }
   constructor() { }
 
   ngOnInit(): void {

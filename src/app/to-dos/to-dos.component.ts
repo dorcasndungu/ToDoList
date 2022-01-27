@@ -17,9 +17,16 @@ export class ToDosComponent implements OnInit {
     new ToDos(6, 'Plot my world domination plan', 'Cause I am an evil overlord', new Date(2030, 3, 14)),
   ]
 
-  showingDetails(i: any){
+  showingDetails(i: any ){
     this.dos[i].showDescription =!this.dos[i].showDescription;
   }
+
+  completeGoal(isComplete: boolean, i: any){
+    if (isComplete) {
+      this.dos.splice(i,1);
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {

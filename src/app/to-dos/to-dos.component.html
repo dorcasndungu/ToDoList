@@ -3,10 +3,10 @@
 <ul>
   <div >
     <li *ngFor="let do of dos;let i = index" class="rounded border p-3 my-3" >
-       {{do.name}} <br>
+       {{do.name}} <small class=" text-secondary text-right">due on {{do.completeDate|date}}</small><br>
     
-      <button class="btn btn-danger btn-large" (click)='showingDetails(i)'>See Details</button>
-      <app-details *ngIf='do.showDescription' [do]='do'></app-details>
+      <button class="btn btn-danger btn-large my-2" (click)='showingDetails(i)'>See Details</button>
+      <app-details *ngIf='do.showDescription' [do]='do' (isComplete) = 'completeGoal($event,i)'></app-details>
     </li>
   </div>
 </ul>
